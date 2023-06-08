@@ -14,6 +14,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     public EmployeeServiceImpl() {
         this.employeeMap = new HashMap<>();
+        add("Vasili", "Vasiliev");
+        add("Ivan", "Ivanov");
+        add("Petr", "Petrov");
+        add("Mihail", "Mihailov");
+        add("Nikolay", "Nikolaev");
+        add("Roman", "Romanov");
     }
 
 
