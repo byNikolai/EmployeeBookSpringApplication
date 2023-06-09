@@ -1,14 +1,38 @@
 package com.example.demo.model;
 
 import java.util.Objects;
+import java.util.Random;
 
 public class Employee {
     private final String firstName;
     private final String lastName;
 
+    private final int salary;
+    private final int departmentID;
+
+
     public Employee(String firstName, String lastName) {
+        Random random = new Random();
         this.firstName = firstName;
         this.lastName = lastName;
+        this.salary = random.nextInt(1000) + 1000;
+        this.departmentID = random.nextInt(5) + 1;
+
+    }
+
+    public Employee(String firstName, String lastName, int salary, int departmentID) {
+        this.salary = salary;
+        this.departmentID = departmentID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public int getDepartmentID() {
+        return departmentID;
     }
 
     public String getFirstName() {
