@@ -10,16 +10,17 @@ import static org.apache.commons.lang3.StringUtils.*;
 public class Employee {
     private final String firstName;
     private final String lastName;
-
     private final int salary;
     private final int departmentID;
 
 
     public Employee(String firstName, String lastName) {
         Random random = new Random();
-        this.firstName = capitalize(firstName.toLowerCase());
-        this.lastName = capitalize(lastName.toUpperCase());
-        this.salary = random.nextInt(1000) + 1000;
+        this.firstName = firstName;
+        this.lastName = lastName;
+//        this.firstName = capitalize(firstName.toLowerCase());
+//        this.lastName = capitalize(lastName.toUpperCase());
+        this.salary = random.nextInt(100000) + 1000;
         this.departmentID = random.nextInt(5) + 1;
 
     }

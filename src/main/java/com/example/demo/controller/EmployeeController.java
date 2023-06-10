@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Employee;
 import com.example.demo.service.EmployeeService;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,8 +21,8 @@ public class EmployeeController {
 
 
     @GetMapping("/add")
-    public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName) {
-        return service.add(firstName, lastName);
+    public Employee addEmployee(@RequestParam String firstName, @RequestParam String lastName, @RequestParam int salary, @RequestParam int departmentID) {
+        return service.add(firstName, lastName, salary, departmentID);
     }
     @GetMapping("/remove")
     public Employee removeEmployee(@RequestParam String firstName, @RequestParam String lastName) {

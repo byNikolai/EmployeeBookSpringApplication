@@ -1,5 +1,6 @@
 package com.example.demo.exceptions;
 
+import com.example.demo.model.Employee;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -9,8 +10,8 @@ public class EmployeeNotFoundException extends RuntimeException {
         super("Employee not found");
     }
 
-    public EmployeeNotFoundException(String message) {
-        super(message);
+    public EmployeeNotFoundException(Employee message) {
+        super(String.valueOf(message));
     }
 
     public EmployeeNotFoundException(String message, Throwable cause) {
