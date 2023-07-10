@@ -1,7 +1,9 @@
-package com.example.demo.service;
+package com.example.demo.service.impl;
 
 import com.example.demo.exceptions.EmployeeNotFoundException;
 import com.example.demo.model.Employee;
+import com.example.demo.service.DepartmentService;
+import com.example.demo.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -11,7 +13,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
-public class DepartmentServiceImpl implements DepartmentService{
+public class DepartmentServiceImpl implements DepartmentService {
 
     private final EmployeeService employeeService;
 
